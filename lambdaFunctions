@@ -1,0 +1,60 @@
+function test(x,y){
+    return (x+y);
+}
+let res = test(1,2);
+console.log(res); // Output: 3
+//without parameters
+const noParams = () => {
+    return "Hello, World!";     
+}
+let nres = noParams();  
+console.log(nres); // Output: Hello, World!
+
+//using lambda function : single parameter
+const lsum = (a)=> a+5;
+let lres = lsum(5);
+console.log(lres); // Output: undefined
+
+//multiple parameters, without return statement
+const lsum2 = (a,b)=> a+b;
+console.log(lsum2(10,2)); // Output: 3
+
+//multiple parameters, with return statement
+const lsum3 = (a,b)=> { 
+    return a+b;
+}   
+let lres3 = lsum3(10,2);
+console.log(lres3); // Output: 12   
+
+// processing array using lambda function
+const arrayItems = [10,2,3,4,5,1];
+arrayItems.forEach((item)=>console.log(item));
+// arrayitems.reduce((acc, item) => acc + item, 0); // Output: 15
+// using lambda function with map
+const doubledItems = arrayItems.map((item) => item * 2);
+console.log(doubledItems); // Output: [2, 4, 6, 8, 10]
+// using lambda function with filter
+const evenItems = arrayItems.filter((item) => item % 2 === 0);
+console.log(evenItems); // Output: [2, 4]
+// using lambda function with find
+const firstEvenItem = arrayItems.find((item) => item % 2 === 0);
+console.log(firstEvenItem); // Output: 2
+// using lambda function with reduce to sum items
+const sumOfItems = arrayItems.reduce((acc, item) => acc + item, 0);
+console.log(sumOfItems); // Output: 15
+// using lambda function with sort
+const sortedItems = arrayItems.sort((a, b) => a - b);
+console.log(sortedItems); // Output: [1, 2, 3, 4, 5]    
+// using lambda function with every
+const allEven = arrayItems.every((item) => item % 2 === 0);
+console.log(allEven); // Output: false
+// using lambda function with some  
+const someEven = arrayItems.some((item) => item % 2 === 0);
+console.log(someEven); // Output: true
+// using lambda function with forEach
+arrayItems.forEach((item) => {  
+    console.log(item); // Output: 1, 2, 3, 4, 5
+});
+// using lambda function with indexOf
+const indexOfItem = arrayItems.indexOf(3);
+console.log(indexOfItem); // Output: 2
